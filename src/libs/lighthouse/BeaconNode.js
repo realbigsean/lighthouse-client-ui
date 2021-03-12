@@ -22,7 +22,9 @@ const BeaconNode = class extends Lighthouse{
 	}
 
 	async _query(path, method='GET'){
-		return await fetch(`${this._address}:${this._port}${path}`)
+		const full_path = this._port ? `${this._address}:${this._port}${path}` : `${this._address}${path}`;
+
+		return await fetch(full_path)
 			.then(response => response.json())
 			.then(({data, code, message}) => {
 				
