@@ -10,7 +10,7 @@ const ValidatorClient = class extends Lighthouse{
 	}
 
 	async _query(path, method='GET', params={}){
-		const uri = `${this._address}:${this._port}/lighthouse${path}`
+		const uri = this._port ? `${this._address}:${this._port}/lighthouse${path}` : `${this._address}/lighthouse${path}`;
 
 		const opts = {
 			method: method,
