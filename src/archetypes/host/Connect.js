@@ -97,7 +97,7 @@ const PortField = styled(
 		</Field.Group.Child>
 	})`
 		.-container:before{
-			content: ':';
+			content: '';
 			font-size: var(--font-size-large);
 			color: var(--color-grey-500);
 			padding: 0 0 2.5rem 0;
