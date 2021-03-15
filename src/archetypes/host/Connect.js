@@ -210,6 +210,10 @@ export default styled(
 			
 			<Form/>
 
+			<iframe
+				src="http://localhost:8080/grafana/d-solo/yY7PIGdZd/summary?orgId=1&refresh=10s&from=1615596167413&to=1615597067414&theme=light&panelId=96"
+				width="450" height="200" frameBorder="0"></iframe>
+
 			<Section.Footer>
 				<Button 
 					disabled={['CONECTING', 'CONNECTED'].includes(state.lighthouse?.status)}
